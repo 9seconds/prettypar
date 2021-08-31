@@ -1,0 +1,12 @@
+[run]
+concurrency = 4
+deadline = "2m"
+tests = true
+skip-dirs = ["vendor"]
+
+[output]
+format = "colored-line-number"
+
+[linters]
+enable-all = true
+disable = ["gochecknoglobals", "gas", "goerr113", "exhaustivestruct"]
