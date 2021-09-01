@@ -10,8 +10,9 @@ import (
 )
 
 const (
-	DefaultLineLength = 79
-	DefaultInputFile  = "-"
+	DefaultLineLength        = 79
+	DefaultInputFile         = "-"
+	DefaultParagraphPrefixes = "// #"
 )
 
 type LineLengthType uint
@@ -48,7 +49,7 @@ func (f *FileType) Set(value string) error {
 
 	switch value {
 	case "", "-":
-		f.ReadCloser = os.Stdout
+		f.ReadCloser = os.Stdin
 
 		return nil
 	}
@@ -74,7 +75,7 @@ var (
 
 		if err := flagVar.Set(defaultValue); err != nil {
 			fmt.Fprintf(os.Stderr, "incorrect PRETTYPAR_LINELENGTH value: %s", err.Error())
-			os.Exit(1)
+			os.Exit(ExitCodeBadArg)
 		}
 
 		flag.Var(&flagVar, "line-length", "a length of line (envvar PRETTYPAR_LINELENGTH)")
@@ -89,9 +90,22 @@ var (
 			panic(err)
 		}
 
-		flag.Var(&flagVar, "input-file", "an input file to use. - means stdin (default -)")
+		flag.Var(&flagVar, "input-file",
+			fmt.Sprintf("an input file to use. - means stdin (default %s)", DefaultInputFile))
 
 		return &flagVar
+	}()
+
+	ParagraphPrefixesFlag = func() string {
+		flagVar := os.Getenv("PRETTYPAR_PARAGRAPHPREFIXES")
+		if flagVar == "" {
+			flagVar = DefaultParagraphPrefixes
+		}
+
+		flag.StringVar(&flagVar, "paragraph-prefixes", flagVar,
+			"whitespace-separated paragraph prefixes (envvar PRETTYPAR_PARAGRAPHPREFIXES)")
+
+		return flagVar
 	}()
 
 	VersionFlag = func() *bool {
