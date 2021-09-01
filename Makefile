@@ -39,6 +39,10 @@ vendor: go.mod go.sum
 fmt:
 	@$(GOTOOL) gofumpt -w -s -extra "$(ROOT_DIR)"
 
+.PHONY: doc
+doc:
+	@$(GOTOOL) godoc -http 0.0.0.0:10000
+
 .PHONY: test
 test:
 	@go test -v ./...
@@ -64,7 +68,11 @@ release:
 		rm -f "$(ROOT_DIR)/dist/config.yaml"
 
 .PHONY: install-tools
-install-tools: install-tools-lint install-tools-gofumpt install-tools-goreleaser
+install-tools: install-tools-godoc install-tools-lint install-tools-gofumpt install-tools-goreleaser
+
+.PHONY: install-tools-godoc
+install-tools-godoc: .bin
+	@$(GOTOOL) go install -mod=readonly golang.org/x/tools/cmd/godoc@latest
 
 .PHONY: install-tools-lint
 install-tools-lint: .bin
@@ -73,11 +81,11 @@ install-tools-lint: .bin
 
 .PHONY: install-tools-gofumpt
 install-tools-gofumpt: .bin
-	@$(GOTOOL) go get -u mvdan.cc/gofumpt
+	@$(GOTOOL) go install -mod=readonly mvdan.cc/gofumpt@latest
 
 .PHONY: goreleaser
 install-tools-goreleaser: .bin
-	@$(GOTOOL) go get -u github.com/goreleaser/goreleaser
+	@$(GOTOOL) go install -mod=readonly github.com/goreleaser/goreleaser@latest
 
 .PHONY: update-deps
 update-deps:
