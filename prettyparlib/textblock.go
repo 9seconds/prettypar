@@ -51,7 +51,7 @@ func (t textBlock) Wrap(lineLength int) textBlock {
 		wordLength := utf8.RuneCountInString(word)
 		currentLineLength := utf8.RuneCountInString(currentLine.String())
 
-		if currentLineLength > 0 && currentLineLength+wordLength > lineLength {
+		if currentLineLength > 0 && currentLineLength+wordLength >= lineLength {
 			newBlock = append(newBlock, currentLine.String())
 			currentLine.Reset()
 		}
