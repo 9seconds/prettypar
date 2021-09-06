@@ -1,0 +1,25 @@
+{"line-length": 40, "paragraph-prefixes": "\\s*#?"}
+
+# Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a mi nec mi condimentum lobortis. Praesent dapibus fringilla dictum.
+# Phasellus vel sapien at odio
+# vestibulum consectetur ut eu ante.
+# Sed
+# posuere sapien ut lacinia lobortis. Donec cursus nibh velit, nec rhoncus enim dictum id. Quisque interdum suscipit sollicitudin. Pellentesque nulla ligula, euismod a nulla sit amet, pellentesque posuere orci. Pellentesque eget lectus consectetur, viverra ex a, cursus nisi.
+
+    #     Cras nec aliquam quam, porttitor viverra odio. Phasellus sed eros non purus pellentesque tempus. Nulla convallis rutrum tellus at gravida. Sed risus orci, fringilla at turpis commodo, fringilla volutpat sapien. Mauris vel interdum dui. Aenean eu elit quis arcu pretium auctor et non odio. Suspendisse malesuada porttitor elit tincidunt feugiat. Cras consequat ex ut felis malesuada tempor nec vel sapien. Duis facilisis pretium tincidunt.
+    #
+    #         # * Pellentesque habitant morbi
+    #         # * tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus
+    #         #   vehicula nulla sapien, sodales volutpat velit venenatis eget. Ut sit amet erat tortor.
+    #         # * Cras posuere accumsan felis nec tincidunt. Quisque commodo, felis in varius lobortis, diam elit luctus urna, ut fermentum quam lectus eget velit. Curabitur eu molestie arcu, vitae sagittis lacus. Suspendisse sit amet ornare metus, at feugiat elit.
+    #         #   Vestibulum
+    #         #   non purus risus. Quisque facilisis vulputate facilisis. In hac habitasse platea dictumst. Nulla volutpat
+    #         # * cursus vestibulum. Sed ullamcorper elit in tincidunt luctus.
+
+1. Aenean imperdiet, arcu eleifend molestie lacinia, nunc leo aliquam velit, a consectetur ex diam vitae mi. Nullam sit amet convallis nunc. Mauris finibus, nisl a gravida laoreet, leo neque cursus odio, a congue tellus quam a dui. In justo felis, malesuada in enim in, pretium ultricies turpis. Curabitur sit amet odio ullamcorper, molestie leo vel, ornare eros.
+
+# 2. Maecenas
+# 3. luctus metus sed elit luctus, vitae imperdiet lacus hendrerit.
+#    Donec gravida nibh magna, nec suscipit sem euismod eu. In blandit mi nec erat efficitur, a blandit dolor egestas. Vivamus vestibulum id quam at faucibus. Aliquam imperdiet efficitur massa, a feugiat elit dictum eu. Cras dapibus iaculis eros at cursus. Aliquam ac convallis turpis, at placerat
+
+4. nibh. Maecenas mollis blandit neque, vitae cursus libero lobortis vitae. Ut maximus, lacus viverra varius iaculis, mauris ante sodales ante, at efficitur ligula risus eu libero. Vestibulum pulvinar volutpat fringilla.
