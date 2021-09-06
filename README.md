@@ -1,5 +1,7 @@
 # prettypar
 
+[![CI](https://github.com/9seconds/prettypar/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/9seconds/prettypar/actions/workflows/ci.yaml)
+[![codecov](https://codecov.io/gh/9seconds/prettypar/branch/master/graph/badge.svg?token=R2C5IAR7AP)](https://codecov.io/gh/9seconds/prettypar)
 [![Go Reference](https://pkg.go.dev/badge/github.com/9seconds/prettypar.svg)](https://pkg.go.dev/github.com/9seconds/prettypar)
 
 This is a simple but highly opinionated alternative to
